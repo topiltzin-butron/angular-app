@@ -1,0 +1,50 @@
+
+<div *ngIf="killer">
+
+  <h1>{{killer.persona.name}}</h1>
+
+  <table class="killer-table">
+    <tr>
+      <td class="killer-feature">Code name</td>
+      <td>{{killer.persona.codeName}}</td>
+    </tr>
+    <tr>
+      <td class="killer-feature">Actress/Actor</td>
+      <td>{{killer.persona.actorName}}</td>
+    </tr>
+    <tr>
+      <td class="killer-feature">Weapon of Choice</td>
+      <td>{{killer.persona.weaponOfChoice}}</td>
+    </tr>
+    <tr>
+      <td class="killer-feature">Organization</td>
+      <td>{{killer.persona.group}}</td>
+    </tr>
+  </table>
+  <br /><br />
+
+  <table class="killer-table mini">
+    <tr>
+      <td class="killer-feature">API links</td>
+      <td>
+        <div *ngFor="let link of killer.links" >
+          <b>{{link.rel}}:</b> {{link.href}}
+        </div>
+
+      </td>
+    </tr>
+  </table>
+
+  <div *ngIf="!editMode">
+    <br /><br />
+    <button (click)="edit()" >Edit</button>
+    <br />
+    <button (click)="delete()">Delete</button>
+  </div>
+
+  <div *ngIf="editMode">
+    <br /><br />
+    <killer-form [cancelCallback]="cancel" [editmode]="editMode" [killer]="killer.persona" ></killer-form>
+  </div>
+
+</div>

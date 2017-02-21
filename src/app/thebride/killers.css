@@ -1,0 +1,37 @@
+h1 {
+  font-family: Impact;
+  color: red;
+}
+
+.killers {
+  background-color: yellow;
+  color: black;
+  list-style: none;
+  padding: 10px;
+  width: 200px;
+}
+
+.killers li {
+  padding: 10px;
+}
+
+.small {
+  font-size: x-small;
+}
+
+a {
+  padding: 10px;
+}
+
+a:visited, a:link {
+  color: black;
+}
+
+a:hover {
+  color: yellow;
+  background-color: black;
+}
+
+a.active {
+  color: red;
+}

@@ -1,0 +1,35 @@
+<h1>Killer</h1>
+
+<form (ngSubmit)="onSubmit()"  >
+  <table class="killer-table">
+    <tr>
+      <td class="killer-feature">Name</td>
+      <td>
+        <b *ngIf="editmode">{{killer.name}}</b>
+        <input *ngIf="!editmode" type="text" class="form-control" required [(ngModel)]="killer.name" name="name"/>
+      </td>
+    </tr>
+    <tr>
+      <td className="killer-feature">Code name</td>
+      <td><input type="text" class="form-control" id="codeName" required [(ngModel)]="killer.codeName" name="codeName"></td>
+    </tr>
+    <tr>
+      <td className="killer-feature">Actress/Actor</td>
+      <td><input type="text" class="form-control" id="actorName" required [(ngModel)]="killer.actorName" name="actorName"></td>
+    </tr>
+    <tr>
+      <td className="killer-feature">Weapon of Choice</td>
+      <td><input type="text" class="form-control" id="weaponOfChoice" required [(ngModel)]="killer.weaponOfChoice" name="weaponOfChoice" ></td>
+    </tr>
+    <tr>
+      <td className="killer-feature">Organization</td>
+      <td><input type="text" class="form-control" id="group" required [(ngModel)]="killer.group" name="group" ></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <button type="submit">Submit</button>
+    </tr>
+  </table>
+</form>
+
+<button (click)="cancel()" >Cancel</button>

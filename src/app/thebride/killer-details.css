@@ -1,0 +1,18 @@
+
+h1 {
+  font-family: Impact;
+  color: red;
+}
+
+.killer-table {
+  align: 0 auto 0 auto;
+}
+
+.killer-feature {
+    color: black;
+    padding-right: 15px;
+}
+
+.mini {
+  font-size: x-small;
+}

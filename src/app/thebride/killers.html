@@ -1,0 +1,12 @@
+<h1>Killers</h1>
+
+<a [routerLink]="['/killers/add']" >Add killer</a>
+<br />
+
+<ul class="killers">
+  <li *ngFor="let killer of killers" >
+    <a [routerLink]="['/killers', killer.persona.id]" >
+      {{killer.persona.name}}
+    </a>
+  </li>
+</ul>
